@@ -1,0 +1,23 @@
+{
+  "name": "smart-mandi-finder",
+  "version": "1.0.0",
+  "description": "Find the best mandi based on latest Agmarknet prices",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  },
+  "keywords": [
+    "mandi",
+    "farmers",
+    "agmarknet",
+    "data-gov-in",
+    "express"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

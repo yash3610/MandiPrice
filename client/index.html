@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Mandi Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-orb orb-1"></div>
+  <div class="background-orb orb-2"></div>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Smart Mandi Finder</h1>
+      <p>Find the best mandi to sell your crop at the highest possible price.</p>
+    </section>
+
+    <section class="search-panel">
+      <form id="searchForm" class="search-form">
+        <div class="field-group">
+          <label for="commodity">Crop Name</label>
+          <input
+            id="commodity"
+            name="commodity"
+            type="text"
+            placeholder="e.g. Tomato, Onion"
+            required
+          />
+        </div>
+
+        <div class="field-group">
+          <label for="state">State</label>
+          <input
+            id="state"
+            name="state"
+            type="text"
+            value="Maharashtra"
+            required
+          />
+        </div>
+
+        <div class="field-group">
+          <label for="sortOption">Sort By</label>
+          <select id="sortOption" name="sortOption">
+            <option value="high-to-low">Price: High to Low</option>
+            <option value="low-to-high">Price: Low to High</option>
+          </select>
+        </div>
+
+        <button id="submitButton" type="submit" class="btn-primary">Find Best Mandi</button>
+      </form>
+
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+
+    <section id="loader" class="loader hidden" aria-hidden="true">
+      <div class="spinner"></div>
+      <p>Fetching latest mandi prices...</p>
+    </section>
+
+    <section id="resultsSection" class="results hidden" aria-live="polite">
+      <div class="top-best" id="topBest"></div>
+      <h2>Top 5 Best Mandis</h2>
+      <div id="resultsGrid" class="results-grid"></div>
+
+      <div class="comparison-wrap">
+        <h3>Price Comparison</h3>
+        <ul id="comparisonList" class="comparison-list"></ul>
+      </div>
+
+      <button id="searchAgain" type="button" class="btn-secondary">Search Again</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
